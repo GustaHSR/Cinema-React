@@ -7,6 +7,7 @@ import CadastroSalas from './pages/CadastroSalas';
 import CadastroSessoes from './pages/CadastroSessoes';
 import VendaIngressos from './pages/VendaIngressos';
 import ListagemSessoes from './pages/ListagemSessoes';
+import Sobre from './pages/Sobre';
 
 function App() {
   return (
@@ -52,6 +53,13 @@ function App() {
             >
               📽️ Sessões Disponíveis
             </NavLink>
+
+             <NavLink 
+              to="/sobre" 
+              className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
+            >
+              ℹ️ Sobre esta aplicação
+            </NavLink>
           </nav>
         </div>
       </header>
@@ -64,6 +72,7 @@ function App() {
           <Route path="/cadastro-sessoes" element={<CadastroSessoes />} />
           <Route path="/venda-ingressos" element={<VendaIngressos />} />
           <Route path="/sessoes" element={<ListagemSessoes />} />
+          <Route path="/sobre" element={<Sobre />}/>
         </Routes>
       </main>
     </Router>
